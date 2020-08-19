@@ -43,8 +43,8 @@ class CodeEditor extends Component {
             let content = this.props.content.content;
             let id = this.props.content.id;
             let fileName = this.props.content.name;
-            
-            this.setState({ java: content, fileId: id, fileName: fileName});
+
+            this.setState({ java: content, fileId: id, fileName: fileName });
         }
 
     }
@@ -55,11 +55,11 @@ class CodeEditor extends Component {
 
     async getFile() {
         try {
-           let res = await api.get('/files/' + this.state.fileId);
-           console.log(res.data);
+            let res = await api.get('/files/' + this.state.fileId);
+            console.log(res.data);
 
-           this.setState({ java: res.data.content, fileName: res.data.name });
-        } catch(e){
+            this.setState({ java: res.data.content, fileName: res.data.name });
+        } catch (e) {
             alert(e);
         }
     }
@@ -69,7 +69,7 @@ class CodeEditor extends Component {
             await api.put('/files/' + this.state.fileId);
 
             alert(`File ${this.state.fileName} updated!`);
-        } catch(e) {
+        } catch (e) {
             alert('Could not save the file\n\nPS: You can not save the example file!');
         }
     }
@@ -79,7 +79,7 @@ class CodeEditor extends Component {
             await api.delete('/files/' + this.state.fileId);
 
             alert('File deleted!');
-        } catch(e) {
+        } catch (e) {
             alert('Could not delete the file, may not be saved in the system');
         }
     }
@@ -97,8 +97,9 @@ class CodeEditor extends Component {
         return (
             <div className="container">
                 <section className="code">
-                    <h1 className="fileName">{this.state.fileName}</h1>
+
                     <div className="codeEditor">
+                        <h1 className="fileName">{this.state.fileName}</h1>
                         <CodeMirror
                             value={java}
                             options={{
@@ -119,7 +120,7 @@ class CodeEditor extends Component {
                         <button className="icon" onClick={() => { this.saveFile() }}>
                             <FaSave className="saveIcon" size={24} />
                         </button>
-                        <button className="icon close" onClick={() => {this.deleteFile()}}>
+                        <button className="icon close" onClick={() => { this.deleteFile() }}>
                             <FaTimes className="closeIcon" size={24} />
                         </button>
 

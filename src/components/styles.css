@@ -8,10 +8,14 @@
 .code .fileName {
     text-align: center;
     color: #f1fa8c;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    z-index: 6;
 }
 
 .codeEditor {
-    height: 82.4vh;
+    height: 100%;
     overflow: hidden;
     position: relative;
 }
