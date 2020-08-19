@@ -7,6 +7,15 @@
   <li>You can use the delete button to delete the file</li>
 </ol>
 
+<ul>
+  <li>React Hooks</li>
+  <li>CodeMirror</li>
+  <li>Axios</li>
+  <li>FastDeepEqual (To compare props objects)</li>
+</ul>
+
+*If I would continue on this project, I would add redux to handle global state*
+
 ## Available Scripts
 
 In the project directory, you can run:
