@@ -160,6 +160,13 @@
     min-height: 85vh;
 }
 
+@media screen and (max-width: 750px){
+    .codeContainer .banner h1 {
+        font-size: 2rem;
+    }
+    
+}
+
 /* .files:hover .filesContainer p {
     font-size: 1.3rem;
 } */
